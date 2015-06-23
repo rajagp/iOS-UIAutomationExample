@@ -13,8 +13,7 @@ You will have to run the tests on an actual device. There appears to be a Xcode 
 dragInsideWithOptions to fail on simulators.
 
 
-The UI AUtomation Script Files:
---------------------------------
+#The UI AUtomation Script Files:
 - LSUIATestcases.js : This file defines the main test cases to be executed against the app
 - LSUIATesthelpers.js: This file includes the functions that perform the tests and is used by LSUIATestcases.js
 - LSUIATestglobals.js: This file defines the global data input
@@ -22,8 +21,7 @@ The UI AUtomation Script Files:
 
 
 
-How to run the tests ?
----------------------------
+#How to run the tests ?
 1)With your app project open in Xcode, select "profile" option from the "Product" menu. This will launch Instruments with your app as the target.
 
 2) Make sure you select the "Automations" tool when Instruments is launched.
