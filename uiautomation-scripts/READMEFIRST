@@ -1,0 +1,58 @@
+/*
+ *  READMEFIRST
+ *
+ *  Created by Priya Rajagopal 
+ *  Copyright (c) 2015 Lunaria Software, LLC. All rights reserved.
+ *  Redistribution and use in source and binary forms, with or without modification,
+ *  are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ * IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 
+ */
+
+
+
+You will have to run the tests on an actual device. There appears to be a Xcode bug which prevents certain functions like dragInsideWithOptions to not work on simulators.
+
+The Files:
+-------------
+- LSUIATestcases.js : This file defines the main test cases to be executed against the app
+- LSUIATesthelpers.js: This file includes the functions that perform the tests and is used by LSUIATestcases.js
+- LSUIATestglobals.js: This file defines the global data input
+- tuneup/*.* : The files in this folder include a set of third party, open source extensions to the UI Automations interface. They greatly simplify writng of the test scripts and are used by the LSUIATest* files. More info on tuneup.js from https://github.com/alexvollmer/tuneup_js.
+
+
+
+How to run the tests ?
+---------------------------
+There are many variations possible- Here is one possible way.
+1)With your app project open in Xcode, select "profile" option from the "Product" menu. This will launch Instruments with your app as the target. 
+
+2) Make sure you select the "Automations" tool when Instruments is launched.
+
+3) If you are testing on your device, make sure you enable UI Automation testing on Device . Settings -> Developer-> Enable UI Automation
+
+4) Import the LSUIATestcases.js test file into the Apple Instruments UI Automations tool. You can find more details on how to import test scripts at https://developer.apple.com/library/ios/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/UsingtheAutomationInstrument/UsingtheAutomationInstrument.html#//apple_ref/doc/uid/TP40004652-CH20-SW2. 
+
+4)Confirm the Target (Device/Simulator) and Target Process (in this case, "LSUIAExample" ) in Instruments using the "target" menu. 
+
+5)Tap "Record" to execute the tests
+
+
+
